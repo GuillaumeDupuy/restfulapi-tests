@@ -1,4 +1,8 @@
-# 
+# restfulapi-tests
+
+# Pré-requis
+
+Vous avez besoin de MongoBD pour faire marcher cette API.
 
 ## Installation
 
