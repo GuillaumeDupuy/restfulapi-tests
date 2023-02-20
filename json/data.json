@@ -1,0 +1,14 @@
+[
+    {
+        "fullname": "Guillaume DUPUY",
+        "email": "guillaume.dupuy@ynov.com",
+        "course_of_study": "Master AI & Big Data",
+        "year": 4
+    },
+    {
+        "fullname": "Delphine PAIVA",
+        "email": "delphine.paiva@ynov.com",
+        "course_of_study": "Master IOT & Logiciel",
+        "year": 4
+    }
+]
