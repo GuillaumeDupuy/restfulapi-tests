@@ -1,4 +1,4 @@
-# restfulapi-tests
+# restfulapi-with-tests
 
 # Pré-requis
 
