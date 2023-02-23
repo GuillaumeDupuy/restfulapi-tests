@@ -1,6 +1,5 @@
 import requests
 import unittest
-unittest.TestLoader.sortTestMethodsUsing = lambda *args: -1
 
 # assuming your FastAPI app is running on localhost:8000
 url = 'http://localhost:8000/student'
@@ -17,7 +16,7 @@ class TestAPI(unittest.TestCase):
     def setUp(self):
         self.student_data = data
 
-    def test_add_student(self):
+    def test_00_add_student(self):
         # test if student is successfully added to the database
         response = requests.post(url, json=data)
         self.assertEqual(response.status_code, 200)
@@ -29,7 +28,7 @@ class TestAPI(unittest.TestCase):
         self.assertEqual(student["data"][0]["year"], self.student_data["year"])
         self.assertEqual(student["message"], "Student added successfully.")
     
-    def test_update_student(self):
+    def test_01_update_student(self):
         # test if a student is successfully updated in the database
         data["year"] = 4
         response = requests.get(url)
@@ -44,7 +43,7 @@ class TestAPI(unittest.TestCase):
         self.assertIsInstance(student, dict)
         self.assertEqual(student["message"], "Student data updated successfully") 
 
-    def test_retrieve_students(self):
+    def test_02_retrieve_students(self):
         # test if all students are successfully retrieved from the database
         response = requests.get(url)
         self.assertEqual(response.status_code, 200)
@@ -53,7 +52,7 @@ class TestAPI(unittest.TestCase):
         self.assertGreater(len(students), 0)
         self.assertEqual(students["message"], "Students data retrieved successfully")
     
-    def test_retrieve_student(self):
+    def test_03_retrieve_student(self):
         # test if a student is successfully retrieved from the database
         response = requests.get(url)
         old_student = response.json()
@@ -67,7 +66,7 @@ class TestAPI(unittest.TestCase):
         self.assertIsInstance(student, dict)
         self.assertEqual(student["message"], "Student data retrieved successfully")
 
-    def test_delete_student(self):
+    def test_04_delete_student(self):
         # test if a student is successfully deleted from the database
         response = requests.get(url)
         old_student = response.json()
