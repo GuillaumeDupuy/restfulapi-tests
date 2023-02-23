@@ -45,8 +45,3 @@ async def not_found_exception_handler(request: Request, exc: HTTPException):
 @app.exception_handler(500)
 async def internal_exception_handler(request: Request, exc: HTTPException):
     return RedirectResponse(url="/")
-
-# Visualisation of the Test API
-@app.get("/test", tags=["Test"])
-async def home_page(request: Request):
-    return templates.TemplateResponse("test.html", {"request": request})

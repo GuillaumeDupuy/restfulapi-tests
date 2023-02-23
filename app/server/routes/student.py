@@ -49,7 +49,7 @@ async def update_student_data(id: str, req: UpdateStudentModel = Body(...)):
     if updated_student:
         return ResponseModel(
             "Student with ID: {} name update is successful".format(id),
-            "Student name updated successfully",
+            "Student data updated successfully",
         )
     return ErrorResponseModel(
         "An error occurred",

@@ -12,7 +12,6 @@ database = client.students
 
 student_collection = database.get_collection("students_collection")
 
-# if student_collection.count_documents({}) == 0:
 student_collection.insert_many(json.load(open(file)))
 
 # helpers
