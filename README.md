@@ -46,14 +46,14 @@
 │    └── data.json
 ```
 
-# Pré-requis
+## Pré-requis
 
 Vous avez besoin de MongoBD pour faire marcher cette API. Une fois le serveur FastAPI lancé, la database va se créer et se remplir toute seule.
 
 ## Installation
 
 Exécuter cette commande afin d'avoir toutes les librairies utilise :
-```console
+```bash
 pip install -r requirements.txt
 ```
 
@@ -75,7 +75,7 @@ http://127.0.0.1:8000/
 
 Pour executer les tests de l'api, suivez les intructions suivantes :
 
-```console
+```bash
 cd test/unit/app
 python -m unittest -v api_test
 ```
