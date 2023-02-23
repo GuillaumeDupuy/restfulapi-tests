@@ -11,13 +11,13 @@ Exécuter cette commande afin d'avoir toutes les librairies utilise.
 pip install -r requirements.txt
 ```
 
-Enfin, vous devez exécuter cette commande pour lancer le serveur 
+## Utilisation
+
+Enfin l'installation finit, vous devez exécuter cette commande pour lancer le serveur 
 
 ```python
 python app/main.py
 ```
-
-## Utilisation
 
 Rendez-vous sur le site une fois le serveur lancée a fin de voir les requêtes possibles à faire avec leur données à donner
 
